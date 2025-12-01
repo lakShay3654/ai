@@ -1,0 +1,10 @@
+% Base cases
+evenlength([]).          % Empty list has even length
+oddlength([_]).
+
+% Recursive cases
+evenlength([_,_|T]) :-
+    evenlength(T).
+
+oddlength([_,_|T]) :-
+    oddlength(T).

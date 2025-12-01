@@ -1,0 +1,12 @@
+% Base case: one element
+maxlist([X], X).
+
+% Recursive case 1: head >= max of tail
+maxlist([H|T], H) :-
+    maxlist(T, M),
+    H >= M.
+
+% Recursive case 2: max of tail > head
+maxlist([H|T], M) :-
+    maxlist(T, M),
+    H < M.

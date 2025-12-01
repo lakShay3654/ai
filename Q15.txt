@@ -1,0 +1,11 @@
+% delete(N, L, R)
+% Deletes the element at the Nth position in list L and returns the result in R.
+
+% Base case: If N = 1, remove the head.
+delete(1, [_|T], T).
+
+% Recursive case: N > 1
+delete(N, [H|T], [H|R]) :-
+    N > 1,            % Ensure N is greater than 1
+    N1 is N - 1,      % Decrement position counter
+    delete(N1, T, R). % Recursive call

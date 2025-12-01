@@ -1,0 +1,7 @@
+% If X is greater than or equal to Y, then M = X
+max(X, Y, X) :-
+    X >= Y.
+
+% Otherwise, M = Y
+max(X, Y, Y) :-
+    X < Y.

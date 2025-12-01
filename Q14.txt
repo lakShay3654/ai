@@ -1,0 +1,8 @@
+% Base case: Insert at position 1 (beginning of the list)
+insert(I, 1, L, [I|L]).
+
+% Recursive case: move forward until position 1 is reached
+insert(I, N, [H|T], [H|R]) :-
+    N > 1,
+    N1 is N - 1,
+    insert(I, N1, T, R).
